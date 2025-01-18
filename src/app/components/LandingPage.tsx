@@ -39,9 +39,9 @@ export default function LandingPage() {
 
             <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
               <h2 className="text-xl font-semibold mb-4 text-[#F7931A]">Innovation</h2>
-                       <p className="text-gray-300">
-              By holding <strong>$POV</strong> on Solana/Base, gain exposure to tier-1 Bitcoin assets, DeFi protocols, and emerging founders—activities typically reserved for ecosystem veterans.
-            </p>
+              <p className="text-gray-300">
+                By holding <span className="font-mono font-bold text-[#F7931A] bg-[#F7931A]/10 px-1.5 py-0.5 rounded-md">$POV</span> on Solana/Base, you gain exposure to tier-1 Bitcoin assets, DeFi protocols, and emerging founders—activities typically reserved for ecosystem veterans.
+              </p>
             </div>
 
             <div className="md:col-span-2 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
@@ -61,7 +61,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Value Proposition */}
           <motion.div 
             className="mt-16 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50"
             initial={{ opacity: 0 }}
@@ -74,19 +73,26 @@ export default function LandingPage() {
                 We&apos;re filling critical gaps in the Bitcoin ecosystem, like meaningful support for quality founders and increasing on-chain asset DeFi TVL. This isn&apos;t a zero-sum game, it&apos;s a system where everyone can win.
               </p>
               <p>
-                PoV DAO accelerates on-chain innovation, strengthens the Bitcoin ecosystem, and maximizes $POV value. We&apos;re not just building for today, we&apos;re shaping Bitcoin&apos;s future.
+                PoV DAO accelerates on-chain innovation, strengthens the Bitcoin ecosystem, and maximizes <span className="font-mono font-bold text-[#F7931A] bg-[#F7931A]/10 px-1.5 py-0.5 rounded-md">$POV</span> value. We&apos;re not just building for today, we&apos;re shaping Bitcoin&apos;s future.
               </p>
             </div>
           </motion.div>
 
-          {/* Call to Action */}
           <motion.div 
-            className="mt-16 text-center"
+            className="mt-16 text-center space-y-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-          
+            <motion.p
+              className="text-gray-400 text-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              Powered by <span className="font-mono font-bold text-[#F7931A] bg-[#F7931A]/10 px-1.5 py-0.5 rounded-md">$POV</span>
+            </motion.p>
+
           </motion.div>
         </motion.div>
       </div>
