@@ -2,17 +2,26 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white pt-4 sm:pt-0">
-      <div className="container mx-auto px-4 py-16 sm:py-24">
+    <div className="min-h-screen relative bg-gray-900 text-white pt-4 sm:pt-0 overflow-hidden">
+      <Image
+        src="/povdao-eye-orange.png"
+        alt="PoV DAO Eye Background"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className="opacity-20"
+      />
+      <div className="container relative z-10 mx-auto px-4 py-16 sm:py-24">
         {/* Hero Section */}
         <motion.div 
           className="text-center space-y-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2.8 }}
+          transition={{ duration: 0.8 }}
         >
           <motion.h1 
             className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#F7931A] to-[#FFB74D] cursor-pointer"
@@ -46,21 +55,21 @@ export default function LandingPage() {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
+            <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
               <h2 className="text-xl font-semibold mb-4 text-[#F7931A]">Our Vision</h2>
               <p className="text-gray-300">
                 We&apos;re tokenizing complex processes and acting as an intermediary that allocates capital in high-friction environments. Through veteran knowledge and connections, we&apos;re creating real opportunities for sustainable, outsized returns.
               </p>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
+            <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
               <h2 className="text-xl font-semibold mb-4 text-[#F7931A]">Innovation</h2>
               <p className="text-gray-300">
                 By holding <span className="font-mono font-bold text-[#F7931A] bg-[#F7931A]/10 px-1.5 py-0.5 rounded-md">$POV</span> on Solana/Base, you gain exposure to tier-1 Bitcoin assets, DeFi protocols, and emerging founders—activities typically reserved for ecosystem veterans.
               </p>
             </div>
 
-            <div className="md:col-span-2 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
+            <div className="md:col-span-2 bg-gray-900/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
               <h2 className="text-xl font-semibold mb-4 text-[#F7931A]">Community</h2>
               <p className="text-gray-300 mb-6">
                 Join a thriving community of innovators, developers, and Bitcoin enthusiasts shaping the future of finance.<br />
@@ -78,7 +87,7 @@ export default function LandingPage() {
           </div>
 
           <motion.div 
-            className="mt-16 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50"
+            className="mt-16 bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.9 }}
