@@ -12,14 +12,30 @@ export default function LandingPage() {
           className="text-center space-y-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2.8 }}
         >
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#F7931A] to-[#FFB74D]">
+          <motion.h1 
+            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#F7931A] to-[#FFB74D] cursor-pointer"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ 
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: 0.2
+            }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+          >
             Proof Of Vision DAO
-          </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light">
+          </motion.h1>
+          <motion.p 
+            className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 font-light mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             Powering Bitcoin&apos;s next chapter
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Information Section */}
@@ -27,7 +43,7 @@ export default function LandingPage() {
           className="mt-20 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
         >
           <div className="grid gap-8 md:grid-cols-2">
             <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
@@ -46,10 +62,10 @@ export default function LandingPage() {
 
             <div className="md:col-span-2 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-[#F7931A]/50 transition-colors duration-300">
               <h2 className="text-xl font-semibold mb-4 text-[#F7931A]">Community</h2>
-                       <p className="text-gray-300 mb-6">
-              Join a thriving community of innovators, developers, and Bitcoin enthusiasts shaping the future of finance.<br />
-              <strong> How will you contribute?</strong>
-            </p>
+              <p className="text-gray-300 mb-6">
+                Join a thriving community of innovators, developers, and Bitcoin enthusiasts shaping the future of finance.<br />
+                <strong> How will you contribute?</strong>
+              </p>
               <a 
                 href="https://discord.gg/JCmv6DcEwe" 
                 target="_blank"
@@ -65,7 +81,7 @@ export default function LandingPage() {
             className="mt-16 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             <h2 className="text-2xl font-semibold mb-6 text-[#F7931A]">Why PoV DAO?</h2>
             <div className="space-y-4 text-gray-300">
@@ -82,17 +98,16 @@ export default function LandingPage() {
             className="mt-16 text-center space-y-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
           >
             <motion.p
               className="text-gray-400 text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.8, delay: 1.3 }}
             >
               Powered by <span className="font-mono font-bold text-[#F7931A] bg-[#F7931A]/10 px-1.5 py-0.5 rounded-md">$POV</span>
             </motion.p>
-
           </motion.div>
         </motion.div>
       </div>
