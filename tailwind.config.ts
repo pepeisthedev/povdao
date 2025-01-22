@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        spacegrotesk: ['var(--font-space-grotesk)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

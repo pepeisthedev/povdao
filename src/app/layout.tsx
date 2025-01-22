@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Space_Grotesk} from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ['latin'],
+    variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: "PoV DAO",
@@ -12,13 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={` ${spaceGrotesk.variable}`}>
         <head>
-              <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
           </head>
       <body
-      style={{ fontFamily: "'Geist', sans-serif", fontVariationSettings: "'wdth' 62.5" }}
-        className={`antialiased`}
+        className={`font-spacegrotesk antialiased `}
       >
         {children}
       </body>
